@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garen</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: #191622;
+        }
+
+        img {
+            width: 100%;
+            
+        }
+
+        .card {
+            width: 30vw;
+            position: relative;
+        }
+        
+        .title{
+            inset: 0;
+            position: absolute;
+            transform: translate3d(0%, 70%, 0);
+        }
+
+        .card:hover .title {
+            transform: translate3d(0%, 30%, 0);
+        }
+
+        .inner img {
+            aspect-ratio: 9/12;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card:hover .inner {
+            transform: perspective(900px)translateY(-5%) rotateX(20deg) translateZ(0);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            filter: blur(0.8px);
+        }
+
+        .inner, .title {
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="inner">
+            <img src="img/garen-img.jpg" alt="Garen Card">
+
+        </div>
+        <img class="title" src="img/garen-circle.png" alt="Garen Circulo">
+    </div>
+</body>
+</html>
